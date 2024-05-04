@@ -15,4 +15,8 @@ fun main() {
         userChoice = readln()
     }
 
+    val randomNumber = (1..3).random()
+
+
+
 }
