@@ -15,8 +15,6 @@ fun main() {
         userChoice = readln()
     }
 
-//    val randomNumber = (1..3).random()
-
     when((1..3).random()) {
         1 -> {
             computerChoice == "Rock"
@@ -29,5 +27,14 @@ fun main() {
         }
     }
     println(computerChoice)
+
+    var result = when {
+        userChoice == computerChoice -> "It's a tie"
+        userChoice == "" && computerChoice == "" -> "User won"
+        userChoice == "" && computerChoice == "" -> "User won"
+        userChoice == "" && computerChoice == "" -> "User won"
+        else -> "Computer won"
+    }
+    println("The result is: $result")
 
 }
