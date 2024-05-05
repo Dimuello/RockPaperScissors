@@ -17,22 +17,22 @@ fun main() {
 
     when((1..3).random()) {
         1 -> {
-            computerChoice == "Rock"
+            computerChoice = "Rock"
         }
         2 -> {
-            computerChoice == "Paper"
+            computerChoice = "Paper"
         }
         3 -> {
-            computerChoice == "Scissors"
+            computerChoice = "Scissors"
         }
     }
     println(computerChoice)
 
     var result = when {
         userChoice == computerChoice -> "It's a tie"
-        userChoice == "" && computerChoice == "" -> "User won"
-        userChoice == "" && computerChoice == "" -> "User won"
-        userChoice == "" && computerChoice == "" -> "User won"
+        userChoice == "Rock" && computerChoice == "Scissors" -> "User won"
+        userChoice == "Paper" && computerChoice == "Rock" -> "User won"
+        userChoice == "Scissors" && computerChoice == "Paper" -> "User won"
         else -> "Computer won"
     }
     println("The result is: $result")
